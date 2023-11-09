@@ -1,0 +1,115 @@
+
+*{
+    font-family: Luckiest Guy, cursive;
+}
+body{
+    margin: 0px;
+    background-image: url("https://cdn.shopify.com/s/files/1/2618/5696/files/Diseno_sin_titulo_-_2021-06-23T170819.910.png?v=1624461049");
+    background-size: cover;
+    background-position: center;
+    
+}
+.nav-container{
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: rgb(5, 71, 109);
+}
+.navbar-logo{
+    justify-self: start;
+    margin-left: 20px;
+    color: rgb(210, 210, 218);
+    margin-top: 4vh;
+    cursor: pointer;
+
+}
+.ver-carrito{
+    font-size: 25px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+}
+
+.banner{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://tn.com.ar/resizer/TvBXd9LcDQYoSIU9ASgCIe3rP2E=/767x0/smart/filters:format(webp)/arc-anglerfish-arc2-prod-artear.s3.amazonaws.com/public/Z5CCK4LQ44JIM6BWFUMIPN2SZI.jpg");
+}
+.banner-container{
+    text-align: center;
+    padding: 15% 0;
+}
+h1{
+    font-size: 50px;
+    
+    opacity: 0.7;
+    text-shadow: 2px 2px 2px rgb(10, 13, 245);
+}
+h2{
+    color: #1ba5c7;
+    font-size: 35px;
+}
+p{
+    color: rgb(0, 255, 136);
+    font-size: 25px;
+}
+.shop-content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    
+    
+
+}
+.card{
+    box-shadow: 0 4px 8px black;
+    max-width: 250px;
+    margin: 20px;
+    text-align: center;
+    font-family: arial;
+    background-color: #1ba5c770;
+    border-radius: 10px;
+
+}
+.card > img:hover{
+    transform: scale(1.2);
+    transition: transform 1.2s; 
+
+}
+.card > img{
+    width: 90%;
+    height: 250px;
+    margin: 15px;
+    border-radius: 10px;
+}
+.price{
+    color: rgb(8, 8, 8);
+    font-size: 22px;
+    
+
+}
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #fff;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    
+}
+.card button:hover{
+    opacity: 0.7;
+}
