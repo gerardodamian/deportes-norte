@@ -6,188 +6,202 @@ body {
     background-image: url("https://cdn.shopify.com/s/files/1/2618/5696/files/Diseno_sin_titulo_-_2021-06-23T170819.910.png?v=1624461049");
     background-size: cover;
     background-position: center;
-}
-.nav-container {
+  }
+  /*navbar*/
+  .nav-container {
     position: sticky;
     z-index: 3;
     top: 0;
   }
-
-.navbar {
+  .navbar {
+    font-size: 45px;
     display: flex;
     justify-content: space-between;
-    height: 12vh;
-    background-color: rgb(5, 71, 109);
-}
-.navbar-logo {
+    height: 15vh;
+    background-color: #0b23ad;
+  }
+  
+  .navbar-logo {
     justify-self: start;
     margin-left: 20px;
-    color: rgb(210, 210, 218);
+    color: #fff;
     margin-top: 4vh;
     cursor: pointer;
-}
-.ver-carrito {
+  }
+  
+  .ver-carrito {
     font-size: 25px;
     margin-right: 20px;
     margin-top: 3.5vh;
     cursor: pointer;
-}
-
-.banner {
+  }
+  
+  /*Banner styles*/
+  .banner {
     background-size: cover;
     background-position: center;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("https://tn.com.ar/resizer/TvBXd9LcDQYoSIU9ASgCIe3rP2E=/767x0/smart/filters:format(webp)/arc-anglerfish-arc2-prod-artear.s3.amazonaws.com/public/Z5CCK4LQ44JIM6BWFUMIPN2SZI.jpg");
-}
-.banner-container {
+      url("https://tn.com.ar/resizer/TvBXd9LcDQYoSIU9ASgCIe3rP2E=/767x0/smart/filters:format(webp)/arc-anglerfish-arc2-prod-artear.s3.amazonaws.com/public/Z5CCK4LQ44JIM6BWFUMIPN2SZI.jpg");
+  }
+  
+  .banner-container {
     text-align: center;
     padding: 15% 0;
-}
-h1 {
-    font-size: 50px;
-
+  }
+  
+  .banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(121, 8, 8, 0.2);
+    font-size: 62px;
+    font-weight: bold;
+  }
+  
+  .banner p {
+    font-size: 30px;
+    color: white;
     opacity: 0.7;
-    text-shadow: 2px 2px 2px rgb(10, 13, 245);
-}
-h2 {
-    color: #1ba5c7;
-    font-size: 35px;
-}
-p {
-    color: rgb(0, 255, 136);
-    font-size: 25px;
-}
-.shop-content {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /*product cards*/
+  .shop-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 30px;
     margin-left: 60px;
     margin-right: 60px;
-}
-.card {
-    box-shadow: 0 4px 8px black;
-    max-width: 250px;
-    margin: 20px;
+  }
+  .card {
+    box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
     text-align: center;
     font-family: arial;
-    background-color: #1ba5c770;
-    border-radius: 10px;
     margin: 10px;
-}
-.card > img:hover {
-    transform: scale(1.2);
-    transition: transform 1.2s;
-}
-.card > img {
+    background-color: #0b23ad71;
+    border-radius: 10px;
+  }
+  
+  .card > img {
     width: 90%;
     height: 250px;
-    margin: 15px;
+    padding-top: 15px;
     border-radius: 10px;
-}
-.price {
-    color: rgb(8, 8, 8);
+  }
+  
+  .price {
+    color: rgb(240, 82, 8);
     font-size: 22px;
-}
-.card button {
+  }
+  
+  .card button {
     border: none;
     outline: 0;
     padding: 12px;
-    color: #fff;
-    background-color: black;
+    color: white;
+    background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-    border-radius: 10px;
-}
-.card button:hover {
+  }
+  
+  .card button:hover {
+    background-color: #0b23ad;
     opacity: 0.7;
-}
-
-.modal-container {
+  }
+  
+  /*modal content*/
+  .modal-container {
     width: 80%;
     margin: 0 10%;
     max-height: 88vh;
     color: #fff;
-    background-color: rgba(6, 16, 150, 0.89);
+    background-color: rgba(6, 85, 121, 0.925);
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*for the top*/
     position: fixed;
     overflow: auto;
     z-index: 9;
     top: 12vh;
     scrollbar-color: none;
-}
-
-.modal-container::-webkit-scrollbar {
+  }
+  
+  .modal-container::-webkit-scrollbar {
     display: none;
-}
-
-.modal-header {
+  }
+  .modal-header {
     display: flex;
     justify-content: space-around;
-    background-color: black;
+    background-color: #c1df3cd7;
     color: #fff;
     width: 100%;
-}
-
-.modal-header-title {
+  }
+  
+  .modal-header-title {
     justify-self: start;
-}
-
-.modal-header-button {
+  }
+  
+  .modal-header-button {
     cursor: pointer;
-}
-
-.modal-container > .modal-content {
+  }
+  
+  .modal-container > .modal-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 70%;
     margin: 10px;
-}
-
-.modal-container > div > img {
-    height: 60px;
-    width: 60px;
-}
-
-.total-content {
+  }
+  
+  .modal-container > div > img {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .total-content {
     font-size: 25px;
     padding: 20px;
     text-align: center;
     padding-top: 20px;
-}
-@media only screen and (max-width: 750px) {
+  }
+  
+  /*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
+  
+  @media only screen and (max-width: 750px) {
     .modal-container {
-        width: 100%;
-        margin: 0;
-        min-height: 88vh;
+      width: 100%;
+      margin: 0;
+      min-height: 88vh;
     }
-
+  
     .modal-container > .modal-content {
-        justify-content: space-between;
-        width: 100%;
-        margin: 2px;
+      justify-content: space-between;
+      width: 100%;
+      margin: 2px;
     }
-
+  
     .modal-container > div > img {
-        height: 80px;
-        width: 80px;
+      height: 80px;
+      width: 80px;
     }
-}
-
-.delete-product {
+  }
+  
+  /*delete button product*/
+  .delete-product {
     cursor: pointer;
-}
-
-.cantidad-carrito {
+  }
+  
+  /*CarritoCounter*/
+  .cantidad-carrito {
     background-color: red;
-    color: #fff;
+    color: white;
     border-radius: 50%;
     font-size: 12px;
     padding: 4px;
@@ -195,10 +209,12 @@ p {
     right: 14px;
     position: absolute;
     display: none;
-}
-.sumar {
+  }
+  
+  .sumar {
     cursor: pointer;
-}
-.restar {
+  }
+  
+  .restar {
     cursor: pointer;
-}
+  }
