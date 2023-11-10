@@ -2,10 +2,14 @@ const shopContent = document.getElementById("shopContent");
 
 const verCarrito = document.getElementById("verCarrito");
 
+
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
+
+
 let carrito = [];
+
 
 productos.forEach((product) => {
     let content = document.createElement("div");
@@ -13,8 +17,16 @@ productos.forEach((product) => {
     content.innerHTML = `
     <img src="${product.imagen}">
     <h3>${product.nombre}</h3>
+    <h4>${product.talles}</h4>
     <p class="price">$${product.precio} </p>`;
     shopContent.append(content);
+
+   
+           
+        
+    
+
+    
 
     let comprar = document.createElement("button");
 
@@ -47,3 +59,5 @@ productos.forEach((product) => {
     carritoCounter();
     });
 });
+
+
