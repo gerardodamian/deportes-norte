@@ -17,7 +17,7 @@ body {
     font-size: 45px;
     display: flex;
     justify-content: space-between;
-    height: 15vh;
+    height: 20vh;
     background-color: #0b23ad;
   }
   
@@ -28,11 +28,15 @@ body {
     margin-top: 4vh;
     cursor: pointer;
   }
+  .logo{
+    width: 100px;
+    height: 100px;
+  }
   
   .ver-carrito {
     font-size: 25px;
     margin-right: 20px;
-    margin-top: 3.5vh;
+    margin-top: 10vh;
     cursor: pointer;
   }
   
@@ -91,6 +95,10 @@ body {
     padding-top: 15px;
     border-radius: 10px;
   }
+  .card > img:hover{
+    transform: scale(1.2);
+    transition: transform 1.2s;
+  }
   
   .price {
     color: rgb(240, 82, 8);
@@ -102,11 +110,12 @@ body {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: #c26315;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    border-radius: 10px;
   }
   
   .card button:hover {
@@ -114,13 +123,13 @@ body {
     opacity: 0.7;
   }
   
-  /*modal content*/
+ 
   .modal-container {
     width: 80%;
     margin: 0 10%;
     max-height: 88vh;
     color: #fff;
-    background-color: rgba(6, 85, 121, 0.925);
+    background-color: rgb(95, 97, 3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,8 +170,8 @@ body {
   }
   
   .modal-container > div > img {
-    height: 120px;
-    width: 120px;
+    height: 60px;
+    width: 60px;
   }
   
   .total-content {
@@ -172,40 +181,69 @@ body {
     padding-top: 20px;
   }
   
-  /*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
   
-  @media only screen and (max-width: 750px) {
+  
+  @media only screen and (min-width: 250px) and (max-width: 520px){
+    .navbar{
+      width: 700px;
+    }
+    
     .modal-container {
-      width: 100%;
+      width: 80%;
       margin: 0;
       min-height: 88vh;
     }
+    
+    .navbar {
+      font-size: 25px;
+      height: 20vh;
+    }
+    .banner h1{
+      font-size: 25px;
+    }
+    .modal-container > .modal-content {
+      
+      width: 50%;
+     
+    }
+   
   
     .modal-container > .modal-content {
       justify-content: space-between;
       width: 100%;
       margin: 2px;
+      
     }
   
     .modal-container > div > img {
       height: 80px;
       width: 80px;
-    }
+        }
+        .modal-container > div > img {
+          height: 40px;
+          width: 40px;
+        }
+        .cantidad-carrito {
+          
+          font-size: 50px;
+          justify-items: end;
+        }
+
   }
   
-  /*delete button product*/
+ 
   .delete-product {
     cursor: pointer;
   }
   
-  /*CarritoCounter*/
+  
   .cantidad-carrito {
-    background-color: red;
-    color: white;
+    background-color: rgb(251, 255, 0);
+    color: rgb(5, 15, 102);
     border-radius: 50%;
-    font-size: 12px;
-    padding: 4px;
-    top: 37px;
+    font-size: 16px;
+    padding: 6px;
+    top: 60px;
     right: 14px;
     position: absolute;
     display: none;
@@ -217,4 +255,89 @@ body {
   
   .restar {
     cursor: pointer;
+  }
+
+  .pie-pagi {
+    width: 100%;
+    background-color: #398ae6;
+  }
+  
+  .pie-pagi .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+  }
+  
+  .pie-pagi .grupo-1 .caja figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pie-pagi .grupo-1 .caja figure img {
+    width: 130px;
+  }
+  
+  .pie-pagi .grupo-1 .caja h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 25px;
+  }
+  
+  .pie-pagi .grupo-1 .caja p {
+    color: aliceblue;
+    margin-bottom: 10px;
+  }
+  
+  .pie-pagi .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: aliceblue;
+    background-color: #92d7f2;
+    text-align: center;
+    transition: all 300ms ease;
+    border-radius: 50%;
+    font-size: 25px;
+  }
+  
+  .pie-pagi .grupo-1 .red-social a:hover {
+    color: #032b58;
+  }
+  
+  .pie-pagi .grupo-2 {
+    background-color: #1210af;
+    padding: 15px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .pie-pagi .grupo-2 small {
+    font-size: 20px;
+  }
+  .whatsapp {
+    height: 30px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    text-shadow: 3px 6px rgb(60, 64, 60);
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .whatsapp a {
+    color: greenyellow;
+    font-size: 40px;
   }
