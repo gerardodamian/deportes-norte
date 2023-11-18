@@ -6,6 +6,36 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+function buscar() {
+    let query = document.getElementById("buscar").value;
+
+    if (query.trim() === "") {
+        return;
+    }
+
+    let results = [];
+
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].nombre.toLowerCase().includes(query.toLowerCase())) {
+            results.push(productos[i]);
+        }
+    }
+
+    document.getElementById("results").innerHTML = "";
+
+    if (results.length > 0) {
+        for (let i = 0; i < results.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = results[i].nombre;
+            document.getElementById("results").appendChild(li);
+        }
+    } else {
+        let li = document.createElement("li");
+        li.textContent = "no se encontro el articulo " + query;
+        document.getElementById("results").appendChild(li);
+    }
+}
+
 productos.forEach((product) => {
     let content = document.createElement("div");
     content.className = "card";
@@ -13,7 +43,7 @@ productos.forEach((product) => {
     <img src="${product.img}">
     <h3>${product.nombre}</h3>
     <p class="price">$${product.precio} </p>
-  `;
+    `;
 
     shopContent.append(content);
 
@@ -50,12 +80,6 @@ productos.forEach((product) => {
     });
 });
 
-//set item
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
-
-//get item
-
-
-

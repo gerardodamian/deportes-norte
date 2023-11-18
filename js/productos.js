@@ -1,10 +1,9 @@
 const productos = [
-    
     {
         id: 1,
         nombre: "Zapatillas adidas",
         precio: 64900,
-        
+
         img: "https://media.solodeportes.com.ar/media/catalog/product/cache/faae2c37ab1d315e4b697a7f62b421b7/z/a/zapatillas-running-adidas-duramo-10-sl-azul-100010gw4080001-1.jpg",
         cantidad: 1,
     },
@@ -12,7 +11,7 @@ const productos = [
         id: 2,
         nombre: "Zapatillas adidas",
         precio: 55500,
-        
+
         img: "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-adidas-racer-tr21-ni-o-ni-a-azul-100010gw6603001-1.jpg",
         cantidad: 1,
     },
@@ -62,7 +61,7 @@ const productos = [
         id: 9,
         nombre: "Remera Los Pumas ",
         precio: 12900,
-        
+
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsAFk1X7DdKc6ky4YMuZYBSWLfhteg-0N0oFQmQwJ-gP1g5GjFocWrunQADfFCSxjfqso&usqp=CAU",
         cantidad: 1,
     },
@@ -70,7 +69,7 @@ const productos = [
         id: 10,
         nombre: "Camiseta De Rugby",
         precio: 15500,
-       
+
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/473/866/products/d1-5858f69f9e92ca249f16905804481007-240-0.jpg",
         cantidad: 1,
     },
@@ -78,7 +77,7 @@ const productos = [
         id: 11,
         nombre: "Remera adidas",
         precio: 16400,
-        
+
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb6PzbLhhshIy_bW2Ol9M80e6joTuMjQY3ig&usqp=CAU",
         cantidad: 1,
     },
@@ -86,7 +85,7 @@ const productos = [
         id: 12,
         nombre: "Remera  Nike ",
         precio: 19900,
-        
+
         img: "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwa73e312e/products/NI86F939-695/NI86F939-695-1.JPG",
         cantidad: 1,
     },
@@ -94,7 +93,7 @@ const productos = [
         id: 13,
         nombre: "Camiseta Puma",
         precio: 15500,
-        
+
         img: "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/r/e/remera-de-futbol-puma-individualcup-negra-640020658289050-1.jpg",
         cantidad: 1,
     },
@@ -102,7 +101,7 @@ const productos = [
         id: 14,
         nombre: "Remera Topper",
         precio: 16400,
-        
+
         img: "https://www.bompie.com.ar/media/catalog/product/cache/1e7c11b43132c034d445b386916b52f7/2/-/2-165599_5.jpg",
         cantidad: 1,
     },
