@@ -27,7 +27,7 @@ const pintarCarrito = () => {
           <p>$${product.precio}</p>
           <span class="restar"> <i class="fa-solid fa-square-minus fa-2xl" style="color: #134805;"></i> </span>
           <p>${product.cantidad}</p>
-          <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #163b02;"></i>  </span>
+          <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #134805;"></i>  </span>
           <p>Total:$${product.cantidad * product.precio}</p>
           <span class="delete-product"><i class="fa-solid fa-trash-can fa-2xl" style="color: #e6e9ef;"></i> </span>
         `;
@@ -57,7 +57,6 @@ const pintarCarrito = () => {
             eliminarProducto(product.id);
         });
     });
-    
 
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
@@ -86,8 +85,8 @@ const eliminarProducto = (id) => {
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block";
 
-    for(let i = 0; i < carrito.length; i++){
-        carrito[i].cantidad
+    for (let i = 0; i < carrito.length; i++) {
+        carrito[i].cantidad;
     }
 
     const carritoLength = carrito.length;
@@ -100,4 +99,4 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
-console.log(carrito)
+console.log(carrito);

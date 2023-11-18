@@ -14,11 +14,13 @@ body {
     top: 0;
 }
 .navbar {
+    width: 100%;
     font-size: 45px;
     display: flex;
     justify-content: space-between;
     height: 20vh;
     background-color: #0b23ad;
+    position: fixed;
 }
 
 .navbar-logo {
@@ -41,9 +43,10 @@ body {
 }
 .buscador {
     max-width: 600px;
+    height: 50px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #398ae6;
+    background-color: #398ae6a8;
     box-shadow: 0px 2px 2px black;
     border-radius: 5px;
 }
@@ -65,7 +68,7 @@ body {
 
 .buscar-button {
     padding: 10px 20px;
-    background-color: rgb(97, 58, 6);
+    background-color: rgb(6, 15, 97);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -101,7 +104,7 @@ body {
 .banner {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 60vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("https://tn.com.ar/resizer/TvBXd9LcDQYoSIU9ASgCIe3rP2E=/767x0/smart/filters:format(webp)/arc-anglerfish-arc2-prod-artear.s3.amazonaws.com/public/Z5CCK4LQ44JIM6BWFUMIPN2SZI.jpg");
 }
@@ -238,13 +241,19 @@ h2 {
 
 @media only screen and (min-width: 320px) and (max-width: 850px) {
     body {
-        width: 540px;
+        width: 840px;
     }
 
     .modal-container {
         width: 80%;
         margin: 0;
         min-height: 88vh;
+    }
+
+    .buscador {
+        max-width: 320px;
+        height: 50px;
+        
     }
     .card {
         width: 80%;
@@ -289,12 +298,15 @@ h2 {
     background-color: rgb(255, 17, 0);
     color: rgb(247, 247, 247);
     border-radius: 50%;
+    width: 15px;
+    height: 15px;
     font-size: 16px;
     padding: 6px;
     top: 60px;
     right: 14px;
     position: absolute;
     display: none;
+    text-align: center;
 }
 
 .sumar {
@@ -389,3 +401,120 @@ h2 {
     color: greenyellow;
     font-size: 40px;
 }
+/*formulario*/
+.parr {
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+h3 {
+    text-align: center;
+  }
+  
+  .pida-turno {
+    text-align: center;
+    background-color: #394ae6;
+    border-radius: 3px;
+    width: 100vw;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .pida-turno h2 {
+    font-size: 35px;
+    color: white;
+  }
+  
+  .turno ::placeholder {
+    color: #3970e6;
+  }
+  
+  .turno {
+    width: 500px;
+    background-color: #3945e6;
+    padding: 30px;
+    padding-top: 15px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    margin-bottom: 60px;
+  }
+  
+  .turno h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .controls {
+    width: 100%;
+    background: rgb(170, 221, 221);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    font-size: 18px;
+    color: #2606b4;
+  }
+  .turnero{
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 3px 6px blue;
+  }
+  
+  .turno p {
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+  }
+  
+  .turno a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .turno a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .turno .button {
+    width: 100%;
+    background: rgb(6, 10, 224);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 25px;
+    border-radius: 5px;
+  }
+  
+  .turno .button:hover {
+    background: rgb(31, 28, 28);
+  }
+  
+  .tarjetas {
+    padding-bottom: 25px;
+    margin-left: 40px;
+    text-align: center;
+  }
+  
+  .tarjetas i {
+    margin-right: 25px;
+  }
+  
+  .tarje {
+    padding-bottom: 45px;
+    padding-top: 25px;
+    color: rgb(241, 242, 245);
+    text-shadow: 2px 3px 6px blue;
+    font-size: 40px;
+  }
+  
