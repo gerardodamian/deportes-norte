@@ -10,6 +10,7 @@ function buscar() {
     let query = document.getElementById("buscar").value;
 
     if (query.trim() === "") {
+        document.getElementById("results").style.display = "none";
         return;
     }
 
@@ -21,20 +22,24 @@ function buscar() {
         }
     }
 
-    document.getElementById("results").innerHTML = "";
+    const resultsContainer = document.getElementById("results");
+    resultsContainer.innerHTML = "";
 
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
             let li = document.createElement("li");
             li.textContent = results[i].nombre;
-            document.getElementById("results").appendChild(li);
+            resultsContainer.appendChild(li);
         }
     } else {
         let li = document.createElement("li");
-        li.textContent = "no se encontro el articulo " + query;
-        document.getElementById("results").appendChild(li);
+        li.textContent = "No se encontró el artículo: " + query;
+        resultsContainer.appendChild(li);
     }
+
+    resultsContainer.style.display = results.length > 0 ? "block" : "none";
 }
+
 
 productos.forEach((product) => {
     let content = document.createElement("div");
@@ -83,3 +88,15 @@ productos.forEach((product) => {
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+// formulario
+let inputs = document.getElementsByClassName("formulario__input");
+
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("keyup", function () {
+        if (this.value.length >= 1) {
+            this.nextElementSibling.classList.add("fijar");
+        } else {
+            this.nextElementSibling.classList.remove("fijar");
+        }
+    });
+}
