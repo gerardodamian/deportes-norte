@@ -25,17 +25,7 @@ function buscar() {
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "";
 
-    if (results.length > 0) {
-        for (let i = 0; i < results.length; i++) {
-            let li = document.createElement("li");
-            li.textContent = results[i].nombre;
-            resultsContainer.appendChild(li);
-        }
-    } else {
-        let li = document.createElement("li");
-        li.textContent = "No se encontró el artículo: " + query;
-        resultsContainer.appendChild(li);
-    }
+    
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
             let li = document.createElement("li");
@@ -153,3 +143,4 @@ for (let i = 0; i < inputs.length; i++) {
         }
     });
 }
+

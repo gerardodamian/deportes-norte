@@ -317,6 +317,12 @@ h2 {
 .restar {
     cursor: pointer;
 }
+.comprarDesdeBusqueda{
+    margin: 8px;
+    margin: 8px;
+    background-color: #92d7f2;
+}
+
 
 .pie-pagi {
     width: 100%;
@@ -410,7 +416,7 @@ h2 {
 }
 /*formulario*/
  .formulario{
-    background-color: #0b16ad48;
+    background-color: #0b16ad75;
     width: 600px;
     max-width: 100%;
     margin: auto;
@@ -427,6 +433,9 @@ h2 {
     color: #0b23ad;
     text-shadow: 1px 2px 3px white;
     margin-bottom: 70px;
+ }
+ span{
+    color: white;
  }
 
  .formulario__input, .formulario__label, .formulario__submit {
