@@ -36,9 +36,62 @@ function buscar() {
         li.textContent = "No se encontró el artículo: " + query;
         resultsContainer.appendChild(li);
     }
+    if (results.length > 0) {
+        for (let i = 0; i < results.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = results[i].nombre;
+    
+            // Agregar un botón "comprar" en cada resultado de búsqueda
+            
+            let comprarDesdeBusqueda = document.createElement("button");
+            comprarDesdeBusqueda.innerText = "comprar 🛒";
+            comprarDesdeBusqueda.className = "comprarDesdeBusqueda";
+    
+            li.appendChild(comprarDesdeBusqueda);
+    
+            comprarDesdeBusqueda.addEventListener("click", () => {
+                agregarAlCarrito(results[i]);
+            });
+    
+            resultsContainer.appendChild(li);
+        }
+    } else {
+        let li = document.createElement("li");
+        li.textContent = "No se encontró el artículo: " + query;
+        resultsContainer.appendChild(li);
+    }
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
 }
+// Función para agregar al carrito
+const agregarAlCarrito = (producto) => {
+    const repeat = carrito.some(
+        (repeatProduct) => repeatProduct.id === producto.id
+    );
+
+    if (repeat) {
+        carrito.map((prod) => {
+            if (prod.id === producto.id) {
+                prod.cantidad++;
+            }
+        });
+    } else {
+        carrito.push({
+            id: producto.id,
+            img: producto.img,
+            nombre: producto.nombre,
+            precio: producto.precio,
+            cantidad: 1,
+        });
+        console.log(carrito);
+        console.log(carrito.length);
+        carritoCounter();
+        saveLocal();
+    }
+};
+
+
+    
 
 
 productos.forEach((product) => {
@@ -75,7 +128,7 @@ productos.forEach((product) => {
                 img: product.img,
                 nombre: product.nombre,
                 precio: product.precio,
-                cantidad: product.cantidad,
+                cantidad: 1,
             });
             console.log(carrito);
             console.log(carrito.length);
