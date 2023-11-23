@@ -1,7 +1,7 @@
 const productos = [
     {
         id: 1,
-        nombre: "Zapatillas adidas",
+        nombre: "Zapatillas adidas zero",
         precio: 64900,
 
         img: "https://media.solodeportes.com.ar/media/catalog/product/cache/faae2c37ab1d315e4b697a7f62b421b7/z/a/zapatillas-running-adidas-duramo-10-sl-azul-100010gw4080001-1.jpg",
@@ -9,7 +9,7 @@ const productos = [
     },
     {
         id: 2,
-        nombre: "Zapatillas adidas",
+        nombre: "Zapatillas adidas terra",
         precio: 55500,
 
         img: "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-adidas-racer-tr21-ni-o-ni-a-azul-100010gw6603001-1.jpg",

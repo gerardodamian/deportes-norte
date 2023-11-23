@@ -319,8 +319,12 @@ h2 {
 }
 .comprarDesdeBusqueda{
     margin: 8px;
-    margin: 8px;
+    padding: 8px;
     background-color: #92d7f2;
+    border-radius: 5px;
+}
+.cerrarBusqueda {
+    margin-top: 10px; /* Ajusta según sea necesario */
 }
 
 

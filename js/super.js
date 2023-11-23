@@ -31,7 +31,7 @@ function buscar() {
             let li = document.createElement("li");
             li.textContent = results[i].nombre;
     
-            // Agregar un botón "comprar" en cada resultado de búsqueda
+           
             
             let comprarDesdeBusqueda = document.createElement("button");
             comprarDesdeBusqueda.innerText = "comprar 🛒";
@@ -52,8 +52,24 @@ function buscar() {
     }
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
+    let cerrarBusqueda = document.createElement("button");
+    cerrarBusqueda.innerText = "Cerrar búsqueda";
+    cerrarBusqueda.className = "cerrarBusqueda";
+
+    
+    cerrarBusqueda.addEventListener("click", () => {
+        resultsContainer.style.display = "none";
+        cerrarBusqueda.style.display = "none";
+    });
+
+   
+    resultsContainer.appendChild(cerrarBusqueda);
+
+    resultsContainer.style.display = results.length > 0 ? "block" : "none";
+    cerrarBusqueda.style.display = results.length > 0 ? "block" : "none";
+
 }
-// Función para agregar al carrito
+
 const agregarAlCarrito = (producto) => {
     const repeat = carrito.some(
         (repeatProduct) => repeatProduct.id === producto.id
@@ -131,6 +147,7 @@ productos.forEach((product) => {
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
 // formulario
 let inputs = document.getElementsByClassName("formulario__input");
 
