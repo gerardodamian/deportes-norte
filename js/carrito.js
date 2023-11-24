@@ -2,13 +2,18 @@ const pintarCarrito = () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "flex";
     const modalHeader = document.createElement("div");
+
+    modalContainer.append(modalHeader);
+
     modalHeader.className = "modal-header";
     modalHeader.innerHTML = `
-        <h1 class="modal-header-title">Carrito</h1>
-      `;
+        <h2 class="modal-header-title">Carrito 🛒</h2>
+        <button class="modal-header-button-clear">Limpiar Carrito 🗑️</button>
+    `;
     modalContainer.append(modalHeader);
 
     const modalbutton = document.createElement("h1");
+
     modalbutton.innerText = "❎";
     modalbutton.className = "modal-header-button";
 
@@ -17,6 +22,13 @@ const pintarCarrito = () => {
     });
 
     modalHeader.append(modalbutton);
+    const clearCartButton = modalHeader.querySelector(
+        ".modal-header-button-clear"
+    );
+    clearCartButton.addEventListener("click", () => {
+        limpiarCarrito();
+        pintarCarrito();
+    });
 
     carrito.forEach((product) => {
         let carritoContent = document.createElement("div");
@@ -57,6 +69,11 @@ const pintarCarrito = () => {
             eliminarProducto(product.id);
         });
     });
+    const limpiarCarrito = () => {
+        carrito = [];
+        carritoCounter();
+        saveLocal();
+    };
 
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
@@ -65,14 +82,15 @@ const pintarCarrito = () => {
     totalBuying.innerHTML = `Total a pagar: $${total} `;
     modalContainer.append(totalBuying);
 };
-const limpiarLocalStorageButton = document.getElementById("limpiarLocalStorage");
+const limpiarLocalStorageButton = document.getElementById(
+    "limpiarLocalStorage"
+);
 
 limpiarLocalStorageButton.addEventListener("click", () => {
-    localStorage.clear(); 
-    carrito = []; 
-    carritoCounter(); 
+    localStorage.clear();
+    carrito = [];
+    carritoCounter();
 });
-
 
 verCarrito.addEventListener("click", pintarCarrito);
 
@@ -109,12 +127,3 @@ const carritoCounter = () => {
 carritoCounter();
 console.log(carrito);
 const limpiarCarritoButton = document.getElementById("limpiarCarrito");
-
-limpiarCarritoButton.addEventListener("click", () => {
-   
-    carrito = [];
-    carritoCounter(); 
-    saveLocal(); 
-});
-
-

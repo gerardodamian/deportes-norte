@@ -1,5 +1,5 @@
 * {
-    font-family: Luckiest Guy, cursive;
+    font-family: cursive;
 }
 body {
     margin: 0px;
@@ -184,11 +184,11 @@ h2 {
 }
 
 .modal-container {
-    width: 70%;
-    margin: 0 10%;
+    width: 60%;
+    margin: 0 32%;
     max-height: 88vh;
     color: #fff;
-    background-color:#80a1e9ec ;
+    background-color: #80a1e9ec;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,7 +206,7 @@ h2 {
 .modal-header {
     display: flex;
     justify-content: space-around;
-    background-color: #3c70dfd7;
+    background-color: #0948d1d7;
     color: #fff;
     width: 100%;
 }
@@ -267,7 +267,6 @@ h2 {
     .banner h1 {
         font-size: 25px;
     }
-   
 
     .modal-container > .modal-content {
         justify-content: space-between;
@@ -289,12 +288,19 @@ h2 {
     }
     #limpiarLocalStorage {
         padding-bottom: 55px;
-        text-align: center;
     }
 }
 
 .delete-product {
     cursor: pointer;
+}
+.modal-header-button-clear {
+    height: 45px;
+    border-radius: 10px;
+    color: #1210af;
+    background-color: #8ebbee;
+    padding: 15px;
+    margin-top: 25px;
 }
 
 .cantidad-carrito {
@@ -332,11 +338,11 @@ h2 {
     height: 35px;
 }
 #limpiarLocalStorage {
-    border-radius: 10px;
-    background-color: #ee382b;
-    height: 35px;
+    border-radius: 50%;
+    background-color: #f7190a;
+    height: 45px;
+    width: 45px;
     box-shadow: 3px 5px 8px rgb(3, 3, 36);
-    
 }
 
 .pie-pagi {

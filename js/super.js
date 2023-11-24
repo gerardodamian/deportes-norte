@@ -47,7 +47,6 @@ function buscar() {
         li.textContent = "No se encontró el artículo: " + query;
         resultsContainer.appendChild(li);
     }
-    
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
     let cerrarBusqueda = document.createElement("button");
@@ -63,8 +62,6 @@ function buscar() {
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
     cerrarBusqueda.style.display = results.length > 0 ? "block" : "none";
-
-    
 }
 
 const agregarAlCarrito = (producto) => {
@@ -153,5 +150,3 @@ for (let i = 0; i < inputs.length; i++) {
         }
     });
 }
-
-
