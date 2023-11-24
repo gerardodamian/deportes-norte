@@ -7,8 +7,8 @@ const pintarCarrito = () => {
 
     modalHeader.className = "modal-header";
     modalHeader.innerHTML = `
-        <h2 class="modal-header-title">Carrito 🛒</h2>
-        <button class="modal-header-button-clear">Limpiar Carrito 🗑️</button>
+        <h2 class="modal-header-title">Carrito <i class="fa-solid fa-cart-shopping fa-xl"></i></h2>
+        <button class="modal-header-button-clear">Limpiar Carrito <i class="fa-solid fa-trash-can fa-2xl" style="color: #e6e9ef;"></i></button>
     `;
     modalContainer.append(modalHeader);
 

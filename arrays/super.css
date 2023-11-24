@@ -1,5 +1,5 @@
 * {
-    font-family: cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 body {
     margin: 0px;
@@ -31,8 +31,9 @@ body {
     cursor: pointer;
 }
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }
 
 .ver-carrito {
@@ -170,7 +171,7 @@ h2 {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #c26315;
+    background-color: #2615c2;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -179,7 +180,7 @@ h2 {
 }
 
 .card button:hover {
-    background-color: #0b23ad;
+    background-color: #09cdf0;
     opacity: 0.7;
 }
 
@@ -299,8 +300,13 @@ h2 {
     border-radius: 10px;
     color: #1210af;
     background-color: #8ebbee;
-    padding: 15px;
+    
     margin-top: 25px;
+    box-shadow: 3px 3px 6px black;
+    font-size: 16px;
+}
+.modal-header-button-clear:hover{
+    background-color: red;
 }
 
 .cantidad-carrito {
