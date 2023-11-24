@@ -22,14 +22,14 @@ const pintarCarrito = () => {
         let carritoContent = document.createElement("div");
         carritoContent.className = "modal-content";
         carritoContent.innerHTML = `
-          <img src="${product.img}">
-          <h3>${product.nombre}</h3>
-          <p>$${product.precio}</p>
-          <span class="restar"> <i class="fa-solid fa-square-minus fa-2xl" style="color: #134805;"></i> </span>
-          <p>${product.cantidad}</p>
-          <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #134805;"></i>  </span>
-          <p>Total:$${product.cantidad * product.precio}</p>
-          <span class="delete-product"><i class="fa-solid fa-trash-can fa-2xl" style="color: #e6e9ef;"></i> </span>
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p>$${product.precio}</p>
+        <span class="restar"> <i class="fa-solid fa-square-minus fa-2xl" style="color:#0b23adf1 ;"></i> </span>
+        <p>${product.cantidad}</p>
+        <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #0b23adf1;"></i>  </span>
+        <p>Total:$${product.cantidad * product.precio}</p>
+        <span class="delete-product"><i class="fa-solid fa-trash-can fa-2xl" style="color: #e6e9ef;"></i> </span>
         `;
 
         modalContainer.append(carritoContent);
@@ -65,6 +65,14 @@ const pintarCarrito = () => {
     totalBuying.innerHTML = `Total a pagar: $${total} `;
     modalContainer.append(totalBuying);
 };
+const limpiarLocalStorageButton = document.getElementById("limpiarLocalStorage");
+
+limpiarLocalStorageButton.addEventListener("click", () => {
+    localStorage.clear(); 
+    carrito = []; 
+    carritoCounter(); 
+});
+
 
 verCarrito.addEventListener("click", pintarCarrito);
 
@@ -100,3 +108,13 @@ const carritoCounter = () => {
 
 carritoCounter();
 console.log(carrito);
+const limpiarCarritoButton = document.getElementById("limpiarCarrito");
+
+limpiarCarritoButton.addEventListener("click", () => {
+   
+    carrito = [];
+    carritoCounter(); 
+    saveLocal(); 
+});
+
+

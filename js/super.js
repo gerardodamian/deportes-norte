@@ -25,24 +25,21 @@ function buscar() {
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "";
 
-    
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
             let li = document.createElement("li");
             li.textContent = results[i].nombre;
-    
-           
-            
+
             let comprarDesdeBusqueda = document.createElement("button");
             comprarDesdeBusqueda.innerText = "comprar 🛒";
             comprarDesdeBusqueda.className = "comprarDesdeBusqueda";
-    
+
             li.appendChild(comprarDesdeBusqueda);
-    
+
             comprarDesdeBusqueda.addEventListener("click", () => {
                 agregarAlCarrito(results[i]);
             });
-    
+
             resultsContainer.appendChild(li);
         }
     } else {
@@ -50,24 +47,24 @@ function buscar() {
         li.textContent = "No se encontró el artículo: " + query;
         resultsContainer.appendChild(li);
     }
+    
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
     let cerrarBusqueda = document.createElement("button");
     cerrarBusqueda.innerText = "Cerrar búsqueda";
     cerrarBusqueda.className = "cerrarBusqueda";
 
-    
     cerrarBusqueda.addEventListener("click", () => {
         resultsContainer.style.display = "none";
         cerrarBusqueda.style.display = "none";
     });
 
-   
     resultsContainer.appendChild(cerrarBusqueda);
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
     cerrarBusqueda.style.display = results.length > 0 ? "block" : "none";
 
+    
 }
 
 const agregarAlCarrito = (producto) => {
@@ -95,10 +92,6 @@ const agregarAlCarrito = (producto) => {
         saveLocal();
     }
 };
-
-
-    
-
 
 productos.forEach((product) => {
     let content = document.createElement("div");
@@ -160,4 +153,5 @@ for (let i = 0; i < inputs.length; i++) {
         }
     });
 }
+
 

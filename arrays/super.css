@@ -1,6 +1,5 @@
 * {
     font-family: Luckiest Guy, cursive;
-    
 }
 body {
     margin: 0px;
@@ -185,11 +184,11 @@ h2 {
 }
 
 .modal-container {
-    width: 80%;
+    width: 70%;
     margin: 0 10%;
     max-height: 88vh;
     color: #fff;
-    background-color: rgb(95, 97, 3);
+    background-color:#80a1e9ec ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,6 +197,7 @@ h2 {
     z-index: 9;
     top: 12vh;
     scrollbar-color: none;
+    border-radius: 10px;
 }
 
 .modal-container::-webkit-scrollbar {
@@ -206,7 +206,7 @@ h2 {
 .modal-header {
     display: flex;
     justify-content: space-around;
-    background-color: #c1df3cd7;
+    background-color: #3c70dfd7;
     color: #fff;
     width: 100%;
 }
@@ -254,7 +254,6 @@ h2 {
     .buscador {
         max-width: 320px;
         height: 50px;
-        
     }
     .card {
         width: 80%;
@@ -317,16 +316,24 @@ h2 {
 .restar {
     cursor: pointer;
 }
-.comprarDesdeBusqueda{
+.comprarDesdeBusqueda {
     margin: 8px;
     padding: 8px;
     background-color: #92d7f2;
     border-radius: 5px;
 }
 .cerrarBusqueda {
-    margin-top: 10px; /* Ajusta según sea necesario */
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #92d7f2;
+    height: 35px;
 }
-
+#limpiarLocalStorage {
+    border-radius: 10px;
+    background-color: #ee382b;
+    height: 35px;
+    box-shadow: 3px 5px 8px rgb(3, 3, 36);
+}
 
 .pie-pagi {
     width: 100%;
@@ -412,92 +419,91 @@ h2 {
     color: greenyellow;
     font-size: 40px;
 }
-.turnero{
+.turnero {
     text-align: center;
     font-size: 25px;
     color: #0b23ad;
     text-shadow: 1px 2px 3px white;
 }
 /*formulario*/
- .formulario{
+.formulario {
     background-color: #0b16ad75;
     width: 600px;
     max-width: 100%;
     margin: auto;
     margin-top: 30px;
     padding: 20px;
-    box-shadow:  0 0 20px black;
+    box-shadow: 0 0 20px black;
     position: relative;
     text-align: center;
- }
-  
- .formulario__titulo{
+}
+
+.formulario__titulo {
     text-align: center;
     margin-top: 0;
     color: #0b23ad;
     text-shadow: 1px 2px 3px white;
     margin-bottom: 70px;
- }
- span{
+}
+span {
     color: white;
- }
+}
 
- .formulario__input, .formulario__label, .formulario__submit {
+.formulario__input,
+.formulario__label,
+.formulario__submit {
     display: block;
     width: 93%;
     font-size: 16px;
-   
- }
- .formulario__input:focus {
-    outline: 1px solid rgba(0,0,0,0.7) ;
- }
- .formulario__input:focus + .formulario__label{
+}
+.formulario__input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.7);
+}
+.formulario__input:focus + .formulario__label {
     margin-top: -130px;
- }
- .formulario__input{
+}
+.formulario__input {
     padding: 20px;
     background: transparent;
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     margin-bottom: 40px;
     color: #7dafe7;
-    
- }
- .formulario__label{
+}
+.formulario__label {
     padding-left: 15px;
     position: absolute;
     margin-top: -85px;
     z-index: -20;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     transition: all 0.5s;
- }
- .formulario__submit{
-    background: rgba(0,0,0,0.5);
+}
+.formulario__submit {
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     border: none;
     width: 50%;
     display: inline-block;
- }
- .fijar {
+}
+.fijar {
     margin-top: -135px;
- }
+}
 
-  .tarjetas {
+.tarjetas {
     padding-bottom: 25px;
     margin-left: 40px;
     text-align: center;
-  }
-  
-  .tarjetas i {
+}
+
+.tarjetas i {
     margin-right: 25px;
-  }
-  
-  .tarje {
+}
+
+.tarje {
     padding-bottom: 45px;
     padding-top: 25px;
     color: rgb(241, 242, 245);
     text-shadow: 2px 3px 6px blue;
     font-size: 40px;
-  }
-  
+}
