@@ -267,14 +267,13 @@ h2 {
     .banner h1 {
         font-size: 25px;
     }
-    .modal-container > .modal-content {
-        width: 50%;
-    }
+   
 
     .modal-container > .modal-content {
         justify-content: space-between;
         width: 100%;
         margin: 2px;
+        width: 50%;
     }
 
     .modal-container > div > img {
@@ -287,6 +286,10 @@ h2 {
     }
     #cantidadCarrito {
         float: right;
+    }
+    #limpiarLocalStorage {
+        padding-bottom: 55px;
+        text-align: center;
     }
 }
 
@@ -333,6 +336,7 @@ h2 {
     background-color: #ee382b;
     height: 35px;
     box-shadow: 3px 5px 8px rgb(3, 3, 36);
+    
 }
 
 .pie-pagi {
