@@ -150,3 +150,12 @@ for (let i = 0; i < inputs.length; i++) {
         }
     });
 }
+document.getElementById("miFormulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Aquí puedes realizar el procesamiento de los datos del formulario
+    // Por ejemplo, podrías enviar los datos a un servidor, almacenarlos localmente, etc.
+
+    // Muestra el mensaje de éxito
+    document.getElementById("mensajeExito").style.display = "block";
+});
