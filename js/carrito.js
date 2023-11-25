@@ -70,6 +70,7 @@ const pintarCarrito = () => {
         });
     });
     const limpiarCarrito = () => {
+        localStorage.clear();
         carrito = [];
         carritoCounter();
         saveLocal();
@@ -82,15 +83,9 @@ const pintarCarrito = () => {
     totalBuying.innerHTML = `Total a pagar: $${total} `;
     modalContainer.append(totalBuying);
 };
-const limpiarLocalStorageButton = document.getElementById(
-    "limpiarLocalStorage"
-);
 
-limpiarLocalStorageButton.addEventListener("click", () => {
-    localStorage.clear();
-    carrito = [];
-    carritoCounter();
-});
+
+
 
 verCarrito.addEventListener("click", pintarCarrito);
 
