@@ -1,5 +1,5 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 body {
     margin: 0px;
@@ -29,6 +29,7 @@ body {
     color: #fff;
     margin-top: 4vh;
     cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .logo {
     width: 120px;
@@ -291,6 +292,10 @@ h2 {
         padding-bottom: 55px;
         text-align: center;
     }
+    #mensajeExito {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }
 
 .delete-product {
@@ -301,12 +306,12 @@ h2 {
     border-radius: 10px;
     color: #1210af;
     background-color: #8ebbee;
-    
+
     margin-top: 25px;
     box-shadow: 3px 3px 6px black;
     font-size: 16px;
 }
-.modal-header-button-clear:hover{
+.modal-header-button-clear:hover {
     background-color: red;
 }
 
@@ -419,21 +424,19 @@ h2 {
     font-size: 20px;
 }
 .whatsapp {
-    height: 30px;
     position: fixed;
     right: 30px;
     bottom: 30px;
     text-align: center;
-    text-shadow: 3px 6px rgb(60, 64, 60);
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 9px 7px 2px 4px;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 55%;
+    background-color: rgb(5, 156, 25);
 }
 
 .whatsapp a {
-    color: greenyellow;
+    color: white;
     font-size: 40px;
 }
 .turnero {
@@ -459,7 +462,7 @@ h2 {
 .formulario__titulo {
     text-align: center;
     margin-top: 0;
-    color: #0b23ad;
+    color: #ad0b19;
     text-shadow: 1px 2px 3px white;
     margin-bottom: 70px;
 }
@@ -495,7 +498,6 @@ span {
     z-index: -20;
     color: rgba(0, 0, 0, 0.5);
     transition: all 0.5s;
-    
 }
 .formulario__submit {
     background: rgba(0, 0, 0, 0.5);
@@ -528,14 +530,14 @@ span {
     text-shadow: 2px 3px 6px blue;
     font-size: 40px;
 }
-.img-footer{
+.img-footer {
     border-radius: 50%;
 }
-.img-tarjeta{
+.img-tarjeta {
     width: 200px;
     height: 180px;
 }
-#mensajeExito{
+#mensajeExito {
     text-align: center;
     margin: 15px;
     border: 2px black;
@@ -545,6 +547,6 @@ span {
     display: none;
     justify-content: center;
     padding: 20px;
-    margin-left: 600px;
-    margin-right: 600px;
+    margin-left: 300px;
+    margin-right: 300px;
 }

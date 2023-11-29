@@ -27,8 +27,9 @@ function buscar() {
 
     if (results.length > 0) {
         for (let i = 0; i < results.length; i++) {
-            let li = document.createElement("li");
+            let li = document.createElement("LI");
             li.textContent = results[i].nombre;
+            
 
             let comprarDesdeBusqueda = document.createElement("button");
             comprarDesdeBusqueda.innerText = "comprar 🛒";
@@ -43,15 +44,19 @@ function buscar() {
             resultsContainer.appendChild(li);
         }
     } else {
-        let li = document.createElement("li");
+        let li = document.createElement("LI");
         li.textContent = "No se encontró el artículo: " + query;
         resultsContainer.appendChild(li);
+        alert(li.textContent)
+        
+        
     }
-
+    
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
     let cerrarBusqueda = document.createElement("button");
     cerrarBusqueda.innerText = "Cerrar búsqueda";
     cerrarBusqueda.className = "cerrarBusqueda";
+    
 
     cerrarBusqueda.addEventListener("click", () => {
         resultsContainer.style.display = "none";
@@ -62,7 +67,10 @@ function buscar() {
 
     resultsContainer.style.display = results.length > 0 ? "block" : "none";
     cerrarBusqueda.style.display = results.length > 0 ? "block" : "none";
+    
 }
+
+
 
 const agregarAlCarrito = (producto) => {
     const repeat = carrito.some(
@@ -152,10 +160,14 @@ for (let i = 0; i < inputs.length; i++) {
 }
 document.getElementById("miFormulario").addEventListener("submit", function(event) {
     event.preventDefault();
+   
 
-    // Aquí puedes realizar el procesamiento de los datos del formulario
-    // Por ejemplo, podrías enviar los datos a un servidor, almacenarlos localmente, etc.
-
-    // Muestra el mensaje de éxito
     document.getElementById("mensajeExito").style.display = "block";
 });
+
+const input = document.querySelector(".formulario__input");
+input.required = " ";
+
+
+
+
