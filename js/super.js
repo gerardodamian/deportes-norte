@@ -98,7 +98,7 @@ const agregarAlCarrito = (producto) => {
     }
 };
 
-productos.forEach((product) => {
+productos.map((product) => {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
