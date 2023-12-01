@@ -30,7 +30,7 @@ const pintarCarrito = () => {
         pintarCarrito();
     });
 
-    carrito.forEach((product) => {
+    carrito.map((product) => {
         let carritoContent = document.createElement("div");
         carritoContent.className = "modal-content";
         carritoContent.innerHTML = `
@@ -92,7 +92,7 @@ verCarrito.addEventListener("click", pintarCarrito);
 const eliminarProducto = (id) => {
     const foundId = carrito.find((element) => element.id === id);
 
-    console.log(foundId);
+    
 
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
@@ -120,5 +120,5 @@ const carritoCounter = () => {
 };
 
 carritoCounter();
-console.log(carrito);
+
 const limpiarCarritoButton = document.getElementById("limpiarCarrito");

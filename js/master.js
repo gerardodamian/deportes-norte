@@ -84,12 +84,20 @@ const agregarAlCarrito = (producto) => {
             precio: producto.precio,
             cantidad: 1,
         });
-        console.log(carrito);
-        console.log(carrito.length);
+       
         carritoCounter();
         saveLocal();
     }
 };
+// Cargar datos desde el archivo JSON
+fetch('productos.json')
+  .then(response => response.json())
+  .then(data => {
+    // Ahora 'data' contiene tu array de productos
+    console.log(data);
+  })
+  .catch(error => console.error('Error al cargar los datos:', error));
+
 
 productos.map((product) => {
     let content = document.createElement("div");
@@ -127,8 +135,8 @@ productos.map((product) => {
                 precio: product.precio,
                 cantidad: 1,
             });
-            console.log(carrito);
-            console.log(carrito.length);
+            
+            
             carritoCounter();
             saveLocal();
         }
