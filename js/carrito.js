@@ -34,24 +34,22 @@ const pintarCarrito = () => {
         let carritoContent = document.createElement("div");
         carritoContent.className = "modal-content";
         carritoContent.innerHTML = `
-        <img src="${product.img}">
-        <h3>${product.nombre}</h3>
-        <p>$${product.precio}</p>
-        <span class="restar"> <i class="fa-solid fa-square-minus fa-2xl" style="color:#0b23adf1 ;"></i> </span>
-        <p>${product.cantidad}</p>
-        <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #0b23adf1;"></i>  </span>
-        <p>Total:$${product.cantidad * product.precio}</p>
-        <span class="delete-product"><i class="fa-solid fa-trash-can fa-2xl" style="color: #e6e9ef;"></i> </span>
-        `;
+            <img src="${product.img}">
+            <h3>${product.nombre}</h3>
+            <p>$${product.precio}</p>
+            <span class="restar"> <i class="fa-solid fa-square-minus fa-2xl" style="color:#0b23adf1 ;"></i> </span>
+            <p>${product.cantidad}</p>
+            <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #0b23adf1;"></i>  </span>
+            <p>Total:$${product.cantidad * product.precio}</p>
+            <span class="delete-product"><i class="fa-solid fa-trash-can fa-2xl" style="color: #e6e9ef;"></i> </span>
+            `;
 
         modalContainer.append(carritoContent);
 
         let restar = carritoContent.querySelector(".restar");
 
         restar.addEventListener("click", () => {
-            if (product.cantidad !== 1) {
-                product.cantidad--;
-            }
+            if (product.cantidad !== 1) {product.cantidad--; }
             saveLocal();
             pintarCarrito();
         });
@@ -90,7 +88,7 @@ const pintarCarrito = () => {
 verCarrito.addEventListener("click", pintarCarrito);
 
 const eliminarProducto = (id) => {
-    const foundId = carrito.find((element) => element.id === id);
+    const foundId = carrito.find(({ id: productId }) => productId === id);
 
     
 

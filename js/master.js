@@ -89,24 +89,17 @@ const agregarAlCarrito = (producto) => {
         saveLocal();
     }
 };
-// Cargar datos desde el archivo JSON
-fetch('productos.json')
-  .then(response => response.json())
-  .then(data => {
-    // Ahora 'data' contiene tu array de productos
-    console.log(data);
-  })
-  .catch(error => console.error('Error al cargar los datos:', error));
+
 
 
 productos.map((product) => {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
-    <img src="${product.img}">
-    <h3>${product.nombre}</h3>
-    <p class="price">$${product.precio} </p>
-    `;
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p class="price">$${product.precio} </p>
+        `;
 
     shopContent.append(content);
 
