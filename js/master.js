@@ -4,6 +4,71 @@ const modalContainer = document.getElementById("modal-container");
 const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
+const prodJson = "../json/productos.json";
+
+let productos;
+
+function obtenerProductos() {
+    fetch(prodJson)
+        .then((response) => {
+            return response.json(); // Extraer el cuerpo de la respuesta JSON
+        })
+        .then((productos) => {
+            productos.map((product) => {
+                let content = document.createElement("div");
+                content.className = "card";
+                content.innerHTML = `
+                    <img src="${product.img}">
+                    <h3 class="nombre">${product.nombre}</h3>
+                    <p class="price">$${product.precio} </p>
+                    `;
+
+                shopContent.append(content);
+
+                let comprar = document.createElement("button");
+                comprar.innerText = "comprar 🛒";
+                comprar.className = "comprar";
+
+                content.append(comprar);
+
+                comprar.addEventListener("click", () => {
+                    const repeat = carrito.some(
+                        (repeatProduct) => repeatProduct.id === product.id
+                    );
+
+                    if (repeat) {
+                        carrito.map((prod) => {
+                            if (prod.id === product.id) {
+                                prod.cantidad++;
+                            }
+                        });
+                    } else {
+                        carrito.push({
+                            id: product.id,
+                            img: product.img,
+                            nombre: product.nombre,
+                            precio: product.precio,
+                            cantidad: 1,
+                        });
+
+                        carritoCounter();
+                        saveLocal().catch((error) => {
+                            console.error(
+                                "Error al guardar el carrito localmente:",
+                                error
+                            );
+                        });
+                    }
+                });
+            });
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+}
+
+obtenerProductos();
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function buscar() {
@@ -99,93 +164,42 @@ const agregarAlCarrito = (producto) => {
         });
 
         carritoCounter();
-        saveLocal()
-            .catch((error) => {
-                console.error('Error al guardar el carrito localmente:', error);
-            });
+        saveLocal().catch((error) => {
+            console.error("Error al guardar el carrito localmente:", error);
+        });
     }
 };
-
-productos.map((product) => {
-    let content = document.createElement("div");
-    content.className = "card";
-    content.innerHTML = `
-        <img src="${product.img}">
-        <h3 class="nombre">${product.nombre}</h3>
-        <p class="price">$${product.precio} </p>
-        `;
-
-    shopContent.append(content);
-
-    let comprar = document.createElement("button");
-    comprar.innerText = "comprar 🛒";
-    comprar.className = "comprar";
-
-    content.append(comprar);
-
-    comprar.addEventListener("click", () => {
-        const repeat = carrito.some(
-            (repeatProduct) => repeatProduct.id === product.id
-        );
-
-        if (repeat) {
-            carrito.map((prod) => {
-                if (prod.id === product.id) {
-                    prod.cantidad++;
-                }
-            });
-        } else {
-            carrito.push({
-                id: product.id,
-                img: product.img,
-                nombre: product.nombre,
-                precio: product.precio,
-                cantidad: 1,
-            });
-
-            carritoCounter();
-            saveLocal()
-            .catch((error) => {
-                console.error('Error al guardar el carrito localmente:', error);
-            });
-    }
-});
-});
 
 const saveLocal = () => {
-return new Promise((resolve, reject) => {
-    try {
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        resolve();
-    } catch (error) {
-        reject(error);
-    }
-});
+    return new Promise((resolve, reject) => {
+        try {
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            resolve();
+        } catch (error) {
+            reject(error);
+        }
+    });
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function () {
     const cargandoMensaje = document.getElementById("cargandoMensaje");
 
-    
-    mostrarMensajeCarga();
+    await mostrarMensajeCarga();
 
-    
-    setTimeout(() => {
-        
-        ocultarMensajeCarga();
+    setTimeout(async () => {
+        await ocultarMensajeCarga();
     }, 5000);
 });
 
-function mostrarMensajeCarga() {
+async function mostrarMensajeCarga() {
     const cargandoMensaje = document.getElementById("cargandoMensaje");
     cargandoMensaje.classList.remove("hidden");
 }
 
-function ocultarMensajeCarga() {
+async function ocultarMensajeCarga() {
     const cargandoMensaje = document.getElementById("cargandoMensaje");
     cargandoMensaje.classList.add("hidden");
 }
-
 
 //carrito//
 const pintarCarrito = () => {
@@ -256,7 +270,6 @@ const pintarCarrito = () => {
         let eliminar = carritoContent.querySelector(".delete-product");
         let mensajeEliminacion = document.getElementById("mensajeEliminacion");
         eliminar.addEventListener("click", () => {
-            
             Swal.fire({
                 title: "¿Quieres eliminar este producto?",
                 text: "Este producto se eliminara de tu Carrito",
@@ -273,7 +286,6 @@ const pintarCarrito = () => {
                         text: "El producto fue borrado de tu carrito.",
                         icon: "success",
                     });
-                    
                 } else {
                     const mensajeEliminar = document.createElement("div");
                     mensajeEliminar.className = "mensajeEliminacion";
@@ -281,7 +293,6 @@ const pintarCarrito = () => {
                     modalContainer.append(mensajeEliminar);
                 }
             });
-           
         });
     });
     const limpiarCarrito = () => {
