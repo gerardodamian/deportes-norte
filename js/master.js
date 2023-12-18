@@ -4,7 +4,7 @@ const modalContainer = document.getElementById("modal-container");
 const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-const prodJson = "../json/productos.json";
+const prodJson = "./json/productos.json";
 
 let productos;
 
