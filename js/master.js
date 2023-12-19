@@ -7,7 +7,11 @@ const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 const prodJson = "./json/productos.json";
+<<<<<<< HEAD
 let listProduct;
+=======
+
+>>>>>>> 2fed9de2d506d3f946558427df4259b3e3827af3
 let productos;
 
 function obtenerProductos() {
