@@ -179,6 +179,7 @@ h1 {
 }
 
 .card > img {
+    margin-left: 15px;
     width: 90%;
     height: 250px;
     padding-top: 15px;
