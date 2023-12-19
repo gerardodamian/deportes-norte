@@ -1,19 +1,24 @@
+
+
 const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-const prodJson = "../json/productos.json";
-
+const prodJson = "./json/productos.json";
+let listProduct;
 let productos;
 
 function obtenerProductos() {
     fetch(prodJson)
         .then((response) => {
-            return response.json(); // Extraer el cuerpo de la respuesta JSON
+            
+            return response.json(); 
         })
+
         .then((productos) => {
+            
             productos.map((product) => {
                 let content = document.createElement("div");
                 content.className = "card";
@@ -73,7 +78,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function buscar() {
     let query = document.getElementById("buscar").value;
-
+  
     if (query.trim() === "") {
         document.getElementById("results").style.display = "none";
         return;
@@ -86,6 +91,7 @@ function buscar() {
             results.push(productos[i]);
         }
     }
+    
 
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "";
@@ -242,7 +248,7 @@ const pintarCarrito = () => {
             <h3>${product.nombre}</h3>
             <p>$${product.precio}</p>
             <span class="restar"> <i class="fa-solid fa-square-minus fa-2xl" style="color:#E58338 ;"></i> </span>
-            <p>${product.cantidad}</p>
+            <p class= "num">${product.cantidad}</p>
             <span class="sumar"><i class="fa-solid fa-square-plus fa-2xl" style="color: #E58338;"></i>  </span>
             <p>Total:$${product.cantidad * product.precio}</p>
             <span class="delete-product"><i class="fa-solid fa-trash-can fa-2xl" style="color: #E58338;"></i> </span>
@@ -364,4 +370,4 @@ document
     });
 
 const input = document.querySelector(".formulario__input");
-input.required = " ";
+input.required = "";

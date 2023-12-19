@@ -13,6 +13,7 @@ body {
 }
 
 
+
 .nav-container {
     height: 200px;
     position: sticky;
@@ -214,9 +215,9 @@ h1 {
 }
 
 .modal-container {
-    width: 60%;
+    width: 50%;
     margin: 0 32%;
-    padding-top: 95px;
+    
     max-height: 88vh;
     color: #ff4f0a;
     background-color: white;
@@ -226,10 +227,10 @@ h1 {
     position: fixed;
     overflow: auto;
     z-index: 9;
-    top: 12vh;
+    top: 15vh;
     scrollbar-color: none;
     border-radius: 10px;
-    border: 1px solid black;
+    
     box-shadow: 13px 13px 26px black;
 }
 
@@ -242,7 +243,7 @@ h1 {
     background-color: #ff4f0a;
     color: #fff;
     width: 100%;
-    
+   
 }
 
 .modal-header-title {
@@ -261,11 +262,15 @@ h1 {
     align-items: center;
     width: 70%;
     margin: 10px;
+    letter-spacing: 3px;
 }
 
 .modal-container > div > img {
     height: 60px;
     width: 60px;
+}
+.modal-container{
+   
 }
 
 .total-content {
@@ -378,6 +383,7 @@ h1 {
     border-radius: 10px;
     color: white;
     background-color: #ff4f0a;
+    margin-bottom: 10px;
 
     margin-top: 25px;
     box-shadow: 3px 3px 6px black;
@@ -405,6 +411,9 @@ h1 {
 .fa-solid{
     margin-left: 35px;
     margin-top: 5px;
+}
+p.num{
+    align-items: center;
 }
 
 .sumar {
