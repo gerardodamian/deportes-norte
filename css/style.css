@@ -318,18 +318,36 @@ h1 {
         margin-left: 30px;
         padding: 15px;
     }
+    #modal-container{
+        margin-top: 70px;
+        margin-left: 10px;
+    }
 
     .modal-container {
-        width: 80%;
-        margin: 0;
+        width: 95%;
+        display: contents;
+        letter-spacing: normal;
+       
         min-height: 88vh;
-        padding-top: 155px;
+       
     }
+    .modal-header{
+        width: 100%;
+        margin: 0 0 10 0;
+   
     
+    }
+    .modal-content{
+        padding: 5px;
+    }
+    .offcanvas{
+        width: 100% !important;
+    }
 
     .buscador {
-        max-width: 320px;
+        max-width: 520px;
         height: 70px;
+        margin: 30px;
     }
     .card {
         width: 80%;
@@ -348,7 +366,7 @@ h1 {
         justify-content: space-between;
         width: 100%;
         margin: 2px;
-        width: 50%;
+        margin-top: 100px;
     }
 
     .modal-container > div > img {
@@ -356,8 +374,9 @@ h1 {
         width: 80px;
     }
     .modal-container > div > img {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
+        padding: 5px;
     }
     #cantidadCarrito {
         float: left;
