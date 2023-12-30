@@ -313,7 +313,23 @@ const pintarCarrito = () => {
     totalBuying.className = "total-content";
     totalBuying.innerHTML = `Total a pagar: $${total} `;
     modalContainer.append(totalBuying);
+
+    const finalizarCompraBtn = document.createElement("button");
+    finalizarCompraBtn.innerText = "Finalizar la compra";
+    finalizarCompraBtn.className = "finalizar-compra-btn";
+    finalizarCompraBtn.addEventListener("click", finalizarCompra);
+    modalContainer.append(finalizarCompraBtn);
 };
+function finalizarCompra() {
+   
+    Swal.fire({
+        title: "Compra finalizada",
+        text: "¡Gracias por tu compra!",
+        icon: "success",
+    });
+    limpiarCarrito();
+    pintarCarrito(); 
+}
 
 verCarrito.addEventListener("click", pintarCarrito);
 

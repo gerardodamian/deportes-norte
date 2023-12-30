@@ -278,6 +278,12 @@ h1 {
     text-align: center;
     padding-top: 20px;
 }
+.finalizar-compra-btn{
+    background-color: #e2531a;
+    border-radius: 10px;
+    color: #eee;
+    margin: 10px;
+}
 .hidden {
     display: none;
     
