@@ -8,8 +8,8 @@ body {
     background-position: center;
 }
 #barra{
-    background-color:#ff4f0a !important ;
-    height: 180px !important;
+    background-color:#e6c0b1 !important ;
+    height: 250px !important;
 }
 
 
@@ -77,7 +77,7 @@ nav.navbar {
 
 .buscar-button {
     padding: 10px 20px;
-    background-color: #ff4f0a;
+    background-color: #e78f6c;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -168,7 +168,7 @@ h1 {
     margin-right: 60px;
 }
 .card {
-    box-shadow: 6px 7px 12px #ff4f0a;
+    box-shadow: 6px 7px 12px #ac6245;
     max-width: 300px;
     margin: auto;
     text-align: center;
@@ -303,6 +303,9 @@ h1 {
     body {
         width: 840px;
     }
+    #barra{
+        height: 350px !important;
+    }
     nav.navbar {
         height: 220px;
     }
@@ -351,7 +354,7 @@ h1 {
         margin: 30px;
     }
     .card {
-        width: 80%;
+        width: 50%;
     }
 
     .navbar {
@@ -643,7 +646,7 @@ span {
     padding-bottom: 45px;
     padding-top: 25px;
     color: #ff4f0a;
-    text-shadow: 2px 3px 6px #ff990a;
+    text-shadow: 2px 3px 6px #f5940d;
     font-size: 40px;
 }
 .img-footer {
