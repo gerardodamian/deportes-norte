@@ -1,19 +1,16 @@
-
-
 const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const showAlert = document.getElementById("showAlert");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
-
 const prodJson = "./json/productos.json";
+
 let listaDeProductos;
 
 function obtenerProductos() {
     fetch(prodJson)
         .then((response) => {
-            
-            return response.json(); 
+            return response.json();
         })
 
         .then((productos) => {
@@ -77,7 +74,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function buscar() {
     let query = document.getElementById("buscar").value;
-  
+
     if (query.trim() === "") {
         document.getElementById("results").style.display = "none";
         return;
@@ -86,11 +83,14 @@ function buscar() {
     let results = [];
 
     for (let i = 0; i < listaDeProductos.length; i++) {
-        if (listaDeProductos[i].nombre.toLowerCase().includes(query.toLowerCase())) {
+        if (
+            listaDeProductos[i].nombre
+                .toLowerCase()
+                .includes(query.toLowerCase())
+        ) {
             results.push(listaDeProductos[i]);
         }
     }
-    
 
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "";
