@@ -7,10 +7,12 @@ body {
     background-size: cover;
     background-position: center;
 }
-#barra {
-    background-color: #ff4f0a !important ;
+#barra{
+    background-color:#ff4f0a !important ;
     height: 180px !important;
 }
+
+
 
 .nav-container {
     height: 200px;
@@ -20,11 +22,12 @@ body {
 }
 nav.navbar {
     width: 100%;
-
+    
     display: flex;
     justify-content: space-between;
     height: 150px;
     background-color: transparent;
+    
 }
 
 .navbar-logo {
@@ -215,7 +218,7 @@ h1 {
 .modal-container {
     width: 50%;
     margin: 0 32%;
-
+    
     max-height: 88vh;
     color: #ff4f0a;
     background-color: white;
@@ -228,7 +231,7 @@ h1 {
     top: 15vh;
     scrollbar-color: none;
     border-radius: 10px;
-
+    
     box-shadow: 13px 13px 26px black;
 }
 
@@ -241,6 +244,7 @@ h1 {
     background-color: #ff4f0a;
     color: #fff;
     width: 100%;
+   
 }
 
 .modal-header-title {
@@ -267,6 +271,7 @@ h1 {
     width: 60px;
 }
 
+
 .total-content {
     font-size: 25px;
     padding: 20px;
@@ -275,6 +280,7 @@ h1 {
 }
 .hidden {
     display: none;
+    
 }
 
 #cargandoMensaje {
@@ -289,7 +295,9 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     font-size: 20px;
     color: #eee;
+    
 }
+
 
 @media only screen and (min-width: 320px) and (max-width: 850px) {
     body {
@@ -311,7 +319,7 @@ h1 {
         margin-left: 30px;
         padding: 15px;
     }
-    #modal-container {
+    #modal-container{
         margin-top: 70px;
         margin-left: 10px;
     }
@@ -320,17 +328,20 @@ h1 {
         width: 95%;
         display: contents;
         letter-spacing: normal;
-
+       
         min-height: 88vh;
+       
     }
-    .modal-header {
+    .modal-header{
         width: 100%;
         margin: 0 0 10 0;
+   
+    
     }
-    .modal-content {
+    .modal-content{
         padding: 5px;
     }
-    .offcanvas {
+    .offcanvas{
         width: 100% !important;
     }
 
@@ -379,6 +390,7 @@ h1 {
         margin-left: 100px;
         margin-right: 100px;
     }
+    
 }
 
 .delete-product {
@@ -414,11 +426,11 @@ h1 {
     display: none;
     text-align: center;
 }
-.fa-solid {
+.fa-solid{
     margin-left: 35px;
     margin-top: 5px;
 }
-p.num {
+p.num{
     align-items: center;
 }
 
@@ -535,7 +547,7 @@ p.num {
     border-radius: 55%;
     background-color: rgb(5, 156, 25);
 }
-.nombre {
+.nombre{
     font-size: 20px;
 }
 
